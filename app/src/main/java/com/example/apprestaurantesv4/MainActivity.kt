@@ -66,7 +66,19 @@ class MainActivity : AppCompatActivity(), PasoGRestaurantAdapter.OnItemListener{
 
 
     override fun clickRestaurant(resta: PasoFRestaurantes) {
-        TODO("Not yet implemented")
+        val intent = Intent(this,PasoIRestaurantDetails::class.java)
+        intent.putExtra("id",resta.id)
+        intent.putExtra("calificacion",resta.calificacion)
+        intent.putExtra("costo",resta.costo)
+        intent.putExtra("foto",resta.foto)
+        intent.putExtra("fundacion",resta.fundacion)
+        intent.putExtra("galeriauno",resta.galeria?.get(0)?.toString())
+        intent.putExtra("galeriados",resta.galeria?.get(2)?.toString())
+        intent.putExtra("galeriatres",resta.galeria?.get(1)?.toString())
+        intent.putExtra("nombre",resta.nombre)
+        intent.putExtra("resena",resta.resena)
+        intent.putExtra("direccion",resta.direccion)
+        startActivity(intent)
     }
 
 

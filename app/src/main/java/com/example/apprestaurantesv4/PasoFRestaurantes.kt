@@ -10,5 +10,6 @@ data class PasoFRestaurantes(
     @SerializedName("Fundacion")var fundacion: String? = null,
     @SerializedName("Costo_Av") var costo: String? = null,
     @SerializedName("reseñas") var resena : String? = null,
+    @SerializedName("direcc") var direccion : String? = null,
     @SerializedName("galeria") var galeria: ArrayList<String>? = null
 )
